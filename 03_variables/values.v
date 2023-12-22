@@ -16,5 +16,22 @@ pub fn main()
 	mutable = pi
 
 	print('${mutable}\n')
-	
+
+	a, c, d := 3, 2, 5
+
+	mut i, mut j := 'Hi', 'Hello'
+
+	println("${a} ${c} ${d}")
+	println("${i} ${j}")
+
+	mut greet := 'Here'
+
+	greet = greet + ' there and Everywhere'
+
+	println("${greet}")
+
+	greet += ' Hope yout have a great day!'
+
+	print("${greet}")
+
 }
