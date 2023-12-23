@@ -1,5 +1,3 @@
-
-
 pub fn main() 
 {
 	mut a := 10
@@ -43,6 +41,45 @@ pub fn main()
 	}
 
 	// ================================================================ //
+
+	mut arr := [User{"John"}]
+
+	u_name := if v := arr[0]
+	{
+		v.name
+	}else
+	{
+		"Unamed"
+	}
+
+	println(u_name)
+
+	x := Alphabet(Abc{"Test"})
+
+	if x is Abc 
+	{
+		println(x)
+	}else if x !is Abc 
+	{
+		println("Not Abc")
+	}
+
+}
+
+type Alphabet = Abc | Xyz
+
+struct Abc 
+{
+	val string
+}
+
+struct Xyz 
+{
+	foo string
+}
+
+struct User {
+	name string
 }
 
 fn res() !int 
