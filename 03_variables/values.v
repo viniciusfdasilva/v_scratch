@@ -32,6 +32,12 @@ pub fn main()
 
 	greet += ' Hope yout have a great day!'
 
-	print("${greet}")
+	println("${greet}")
+
+	mut is_false := false
+	mut is_true  := true
+
+	println(is_false)
+	println(is_true)
 
 }
