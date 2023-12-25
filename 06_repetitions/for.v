@@ -89,6 +89,33 @@ pub fn main() {
 	}
 
 	println(num)
+
+	// ==================================== //
+
+	for k := 0; k < 10; k += 2 {
+		if k == 6 {
+			continue
+		}
+
+		println(k)
+	}
+
+	// ==================================== //
+
+	outer: for j := 4; true; j++ { 
+		println(j)
+
+		for {
+			if j < 7 {
+				continue outer
+			}else {
+				break outer
+			}
+		}
+	}
+
+	// ==================================== //
+
 }
 
 
