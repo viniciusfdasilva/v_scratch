@@ -77,6 +77,18 @@ pub fn main() {
 	println(sum)
 
 	// ==================================== //
+
+	mut num := 0
+
+	for {
+		num += 2
+
+		if num >= 10 {
+			break
+		}
+	}
+
+	println(num)
 }
 
 
