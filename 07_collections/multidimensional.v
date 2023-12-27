@@ -30,14 +30,50 @@ pub fn main()
 	println(upper)
 
 	upper_fn := words.map(fn (w string) string{
-		return w.upper()
+		return w.to_upper()
 	})
 
 	println(upper_fn)
 
 	nums2 := [1,2,3]
-	println(num2.any(it == 2))
-	println(num2.all(it >= 2))
+	println(nums2.any(it == 2))
+	println(nums2.all(it >= 2))
 
-	
+	mut numbers1 := [1,2,3]
+	numbers1.sort()
+	numbers1.sort(a > b)
+
+
+	mut users := [User{21, 'Bob'}, User{65, 'Zarkon'}, User{25, 'Alice'}]
+	users.sort(a.age < b.age)
+	users.sort(a.name > b.name)
+
+	custom_sort_fn := fn(a &User, b &User) int
+	{
+		if a.name == b.name {
+			if a.age < b.age {
+				return 1
+			}
+			if a.age > b.age {
+				return -1
+			}
+
+			return 0
+		}
+		if a.name < b.name {
+			return -1
+		}else{
+			return 1
+		}
+
+		return 0
+	}
+
+	users.sort_with_compare(custom_sort_fn)
 }	
+
+struct User{
+	age int
+	name string
+}
+
