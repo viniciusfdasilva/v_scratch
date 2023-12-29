@@ -1,2 +1,1 @@
-asiofjasodifjasdfasdfasdfasd
-asdfasdfasdfasdfasdfasdfsadf
+This is a log file
