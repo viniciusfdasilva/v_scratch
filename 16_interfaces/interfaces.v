@@ -1,4 +1,4 @@
-module main
+
 
 interface Foo{
 	write(string) string
