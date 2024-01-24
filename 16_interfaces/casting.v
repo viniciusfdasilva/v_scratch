@@ -2,21 +2,19 @@
 
 struct Dog{
 	breed string
-	speak() string
 }
 
-fn (d Dog) speak() string {
-	println('Woof')
+fn (d Dog) speak() string{
+	return 'Woof'
 }
 
 
 struct Cat{
 	breed string
-	speak() string
 }
 
 fn (c Cat) speak() string{
-	println('Meow')
+	return 'Meow'
 }
 
 interface Something{}
@@ -24,7 +22,7 @@ interface Something{}
 
 fn announce(s Something){
 	if s is Dog {
-		println('a ${s.breed] dog')
+		println('a ${s.breed} dog')
 	}else if s is Cat{
 		println('a cat speaks ${s.speak()}')
 	}else {
